@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body
+        {
+            padding: 20px;
+        }
+        .container
+        {
+            padding: 20px;
+        }
+        .three
+        {
+            padding: 30px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-       var m1=parseInt(prompt("Enter the m1"));
-       var m2=parseInt(prompt("Enter the m2"));
-       var m3=parseInt(prompt("Enter the m3"));
-       var m4=parseInt(prompt("Enter the m4"));
-       var m5=parseInt(prompt("Enter the m5"));
+    <h1>BMI Calculator</h1>
+     <div class="container">
+    <label class="one" for="weight">Weight (kg):</label>&nbsp;
+    <input type="number" id="weight" placeholder="Enter weight in kg">
+    <br><br>
 
-    var sid=2989;
-    var sname="Nithish"
-    var total=m1+m2+m3+m4+m5;
-    var percentage=(total*100)/500.0;
-    document.write("sid=:"+sid+"<br>");
-    document.write("sname=:"+sname+"<br>");
-    document.write("total=:"+total+"<br>");
-    document.write("percentage=:"+percentage+"<br>");
-     
+    <label class="two" for="height">Height (m):</label>&nbsp;&nbsp;
+    <input type="number" id="height" placeholder="Enter height in meters" step="0.01">
+    <br>
+    </div>
+    
+    <button onclick="calculateBMI()">Calculate BMI</button>
 
-    if(percentage>90){
-        document.write("Grade A")
-    }
-    else if(persentage > 80 && persentage <=90){
-        document.write("Grade B")
-    }
-    else if(persentage > 70 && persentage <=80){
-        document.write("Grade c")
-    }
-    else if(persentage > 60 && persentage <=70){
-        document.write("Grade D")
-    }
-    else if(persentage > 50 && persentage <=60){
-        document.write("Grade E")
-    }
-    else{
-        document.write("Fail")
-    }
-    </script>
+    <div class="three" id="result">
+        <label for="BMI value">BMI value:</label>
+        <span id="bmiValue"></span><br><br>
+        <label for="category">category:</label>
+        <span id="category"></span><br><br>
+    </div>
+
+    <script src="st.js"></script> 
 </body>
 </html>
